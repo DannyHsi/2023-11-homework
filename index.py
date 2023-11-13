@@ -1,45 +1,31 @@
 from flask import Flask, render_template, request
-from datetime import datetime
+
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    X = "資管2A 習祐翔<br>"
-    X += "<a href=/mis>資訊管理導論</a><br>"
-    X += "<a href=/today>日期時間</a><br>"
-    X += "<a href=/about>習祐翔網頁</a><br>"
-    X += "<a href=/welcome?guest=祐翔>歡迎</a><br>"
-    X += "<a href=/account>使用表單方式傳值</a><br>"
+    X = "作者：資管二Ａ 習祐翔<br>"
+    X += "<a href=/aboutme>我的個人簡介</a><br>"
+    X += "<a href=/account>MIS相關工作介紹</a><br>"
+    X += "<a href=/today>職涯測驗結果</a><br>"
+    X += "<a href=/welcome>未來規劃</a><br>"
     return X
-
-@app.route("/mis")
-def course():
-    return "<h1>資訊管理導論</h1>"
 
 @app.route("/today")
 def today():
-    now = datetime.now()
-    return render_template("today.html", datetime = str(now))
+    return render_template("today.html")
 
-@app.route("/about")
+@app.route("/aboutme")
 def about():
     return render_template("aboutme.html")  
 
-@app.route("/welcome", methods=["GET", "POST"])
+@app.route("/welcome")
 def welcome():
-    user = request.values.get("guest")
-    return render_template("welcome.html", name=user)
+    return render_template("welcome.html")
 
-@app.route("/account", methods=["GET", "POST"])
+@app.route("/account")
 def account():
-    if request.method == "POST":
-        user = request.form["user"]
-        pwd = request.form["pwd"]
-        result = "您輸入的帳號是：" + user + "; 密碼為：" + pwd 
-        return result
-    else:
-        return render_template("account.html")
-
+    return render_template("account.html")
 
 #if __name__ == "__main__":
-#    app.run()
+    #app.run()
