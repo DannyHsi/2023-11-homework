@@ -1,0 +1,104 @@
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MIS相關工作介紹</title>
+
+	<style type="text/css">
+		* { 
+			font-family: "標楷體"; }
+
+		header { 
+			font-size: 36px;
+			color: yellow; }
+
+		.col-lg-4 {
+			border: 1px solid; }
+
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<script>
+		$(document).ready(function(){
+			$("#COMPANY").hover(function(){
+				$("#PICTURE").attr("src","/static/logo.png");
+			});
+
+			$("#PICTURE").click(function(){
+				$("#PICTURE").hide();
+				$("#PICTURE").fadeIn("slow")
+			});
+		});
+	</script>
+
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-md bg-warning navbar-light">
+	<a class="navbar-brand" href="#">選單</a>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="#COMPANY">公司資訊</a></li>
+			<li class="nav-item"><a class="nav-link" href="#worker">職務介紹</a></li>
+			<li class="nav-item"><a class="nav-link" href="#need">工作條件需求</a></li>
+		</ul>
+	</div>
+	</nav>
+
+	<main class="container-fluid bg-dark text-white text-center">
+
+		<nav>
+			<h1><a href="https://www.twincn.com/item.aspx?no=53129265" class="text-reset text-decoration-none text-white bg-success" target="_blank" id="COMPANY">精誠資訊股份有限公司 </a></h1>
+		</nav>
+
+		<img src="/MIS3/static/logo.png" alt="照片" width="300" class="img-fluid rounded-circle" id="PICTURE"> 
+		<br><br><br>
+
+		<div class="row">
+			<session id="COMPANY" class="col-lg-4">
+				<header><a class="text-reset text-decoration-none bg-white">公司資訊</header>
+				<h3>公司名：精誠資訊股份有限公司<br>
+				地址：新北市永和區永和路一段67號14樓<br>
+				服務：</h3>
+				<h4>數位資安</h4>
+				<h4>行動應用</h4>
+				<h4>大數據分析</h4>
+				<h3>公司介紹：</h3>
+				<h4>台灣資訊服務產業龍頭企業<br>
+					透過5A跨界軟體4C雲服務以虛擬化、容器化、微服務化為手段，在數位平台上提供創新價值的數據服務與商業模式</h4>
+			</session>
+
+			<article id="worker" class="col-lg-4">
+				<header><a class="text-reset text-decoration-none bg-white">職務介紹</header> 
+				<h3>系統維護員、<br>
+					資訊助理人員、<br>
+					MIS/網管主管<br></h3>
+			</article>
+			
+			<aside id="need" class="col-lg-4">
+				<header><a class="text-reset text-decoration-none bg-white">
+				工作條件需求</a></header>
+				<h3>接受身份：</h3><h4>上班族、應屆畢業生</h4>
+				<h3>工作經歷：</h3><h4>1年以上</h4>
+				<h3>學歷要求：</h3><h4>專科、大學、碩士</h4>
+				<h3>科系要求：</h3><h4>資訊管理、資訊工程、電機工程、電子工程</h4>
+				<h3>語文條件：</h3><h4>英文</h4>
+				<h3>電腦專長：</h3><h4>Ｗord/Excel/PowerPoint/MS SQL</h4>
+			</aside>
+		</div><br><br>
+		
+		<footer>
+			Copyright ©  習祐翔. All Rights Reserved.
+		</footer>
+		
+	</main>
+</body>
+</html>
